@@ -1,6 +1,6 @@
 {
     "name": "springimport/magento2-module-restapi-exclude-fields",
-    "description": "Adds parameter to exclude fields in requests. Similar as [include fields](http://devdocs.magento.com/guides/v2.1/howdoi/webapi/filter-response.html#using-with-searchcriteria) by Magento 2.",
+    "description": "Adds parameter to exclude fields in requests. Similar as include fields http://devdocs.magento.com/guides/v2.1/howdoi/webapi/filter-response.html#using-with-searchcriteria by Magento 2.",
     "type": "magento2-module",
     "license": "MIT",
     "minimum-stability": "dev",
