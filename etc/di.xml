@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="SpringImport\RestApiFilters\Controller\Rest">
-        <plugin name="restapi_add_exclude_fields_filter" type="\SpringImport\RestApiExcludeFields\Controller\RestPlugin" sortOrder="1"/>
+    <!-- Plugin for Magento 2.3.x and 2.4.x REST API processing -->
+    <type name="Magento\Webapi\Controller\Rest\RequestProcessor\Sync">
+        <plugin name="restapi_exclude_fields_filter" type="SpringImport\RestApiExcludeFields\Plugin\Webapi\RequestProcessorPlugin" sortOrder="100"/>
     </type>
 </config>

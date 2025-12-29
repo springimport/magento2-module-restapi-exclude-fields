@@ -2,8 +2,6 @@
 
 namespace SpringImport\RestApiExcludeFields\Filter;
 
-use SpringImport\RestApiFilters\Filter\AbstractFieldsFilter;
-
 /**
  * Class to handle partial service response
  */

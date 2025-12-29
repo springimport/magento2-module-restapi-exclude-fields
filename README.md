@@ -1,20 +1,24 @@
 # REST API Exclude Fields for Magento 2
 
-Adds parameter to exclude fields in requests. Similar to [include fields](http://devdocs.magento.com/guides/v2.1/howdoi/webapi/filter-response.html#using-with-searchcriteria) by Magento 2.
+Adds blacklist filtering to Magento REST API via `excludeFields` parameter. Magento has native whitelist filtering (`?fields=`), this module adds blacklist filtering (`?excludeFields=`) to exclude specified fields from responses.
+
+## Version Compatibility
+
+| Magento Version | PHP Version | Status |
+|-----------------|-------------|--------|
+| **2.3.x - 2.4.x** | **7.2 - 8.3** | **✅ Compatible** |
+| 2.2.x | 7.0 - 7.2 | ⚠️ Legacy (use v1.x) |
 
 ## Installation
 
-Enable module:
 ```bash
-php -f bin/magento module:enable SpringImport_RestApiExcludeFields
+composer require springimport/magento2-module-restapi-exclude-fields:^2.0
+php bin/magento module:enable SpringImport_RestApiExcludeFields
+php bin/magento setup:upgrade
 ```
 
-Disable module:
-```bash
-php -f bin/magento module:disable SpringImport_RestApiExcludeFields
-```
+## Usage
 
-Update system:
-```bash
-php -f bin/magento setup:upgrade
+```
+GET /rest/V1/orders/1?excludeFields=items[product_option,extension_attributes]
 ```
